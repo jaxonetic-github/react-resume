@@ -38,13 +38,13 @@ const secFirstItems = ['Gathered requirements and created design documentation i
 'Created template pages for use by custom tag handlers.',
 'Participated in redesign of FORTE development environment into a J2EE architecture'];
 const techItems = ['Instructed a weekly two hour Java recitation class','Trained and managed a small team of new recitation Teaching Assistants','Prepared and evaluated weekly 45-minute quizzes and the three-hour final exam', 'Assisted professors in general administrative course duties and policy decisions']
-const reyeItems = ['· Acted as a buffer/translator between scientists and developers, by helping translate scientific product documents into technical tasks for myself and other developers in JIRA.',
+const reyeItems = ['Acted as a buffer/translator between scientists and developers, by helping translate scientific product documents into technical tasks for myself and other developers in JIRA.',
 'Helped managed and act as a point of contact to a team of developers in Vietnam and along the US east coast.',
 'Managed and maintened AWS cloud services.  This included creating Lambdas (in NodeJS and Java) which interact w	ith Dynamo DB, creating API Gateway endpoints, Route53 domain zones,  configuring load balancers, and syncing S3buckets with EC2 instances.',
 'Managed  pushes from the development environment to staging, and production.',
 'Acted as the first point of contact for fixing client and in-house technical issues.',
-'· Installed and deployed new systems for clients.',
-'· Front-end development in Unity3D and AngularJS.  The Unity application communicated with a remote AngularJS website via the UWK.Webkit.'];
+'Installed and deployed new systems for clients.',
+'Front-end development in Unity3D and AngularJS.  The Unity application communicated with a remote AngularJS website via the UWK.Webkit.'];
 
 //add work tasks to work section
 const versiteHistory = {companyName: 'Versite', position: 'Software Engineer', city: 'Salvador', 
@@ -83,7 +83,18 @@ const educHistoryTech = {section: 'education', graduationDate: 'Dec 1999', insti
 const educHistoryLang = {section: 'education', graduationDate: 'Dec 2011', institute: 'Language Culture Coaching, International', degree: 'TESOL Certification', city:'Berkeley', state:'California'}
 
 const educationSection = [educHistoryTech, educHistoryLang];
+/******** End of Education Setup  *******/
 
-ReactDOM.render(<Resume educationHistory={educationSection} workHistory={workHistorySection} />, document.getElementById('root'));
+const techOSs = {category:'Operating Systems', technologies:'Windows, Linux, Mac OSX'};
+const techLangs = {category:'Languages', technologies:'Java(J2EE), Objective C, PHP, Javascript'};
+const techFrameworks = {category:'Frameworks', technologies:'Hibernate, Spring, Struts, EJB, Grails, Node, CakePHP'};
+const techServers  = {category:'Servers', technologies:'Chordiant, Apache, WebSphere, IIS, RESIN, Tomcat, JBOSS' };
+const techDbs = {category:'Databases', technologies:'Oracle, MySql, Sql Server, MongoDB, SqlLite, DB2, Neo4j'};
+
+const technologySection = [techOSs, techLangs, techFrameworks, techServers, techDbs];
+
+
+const contactSection = {name:'Alonzo Jackson', phone:'(301)304-7304', email:'jaxonetic@gmail.com'}
+ReactDOM.render(<Resume educationHistory={educationSection} workHistory={workHistorySection} technology={technologySection}  contactInfo={contactSection}/>, document.getElementById('root'));
 registerServiceWorker();
 

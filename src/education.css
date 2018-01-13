@@ -32,6 +32,15 @@ h3{text-transform: capitalize}
 
 /*education*/
 .education{
-    margin-left: 35%;
 }
+
 ul{list-style-type: none;}
+#contact-section{text-align: center}
+.spaced-tablecell{padding-right: 100px;}
+#spaced-table{margin-left: 2em;}
+body {margin: 10px; }
+/* work info */
+dl{margin-top: 0px;}
+h4{
+    margin-bottom: 0px;
+}
