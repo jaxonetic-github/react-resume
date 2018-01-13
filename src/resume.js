@@ -95,7 +95,7 @@ function ContactInfo(props) {
 
   return (
     <ul id="contact-section">
-    <li>{props.contactInfo.name}</li>
+    <li><h4>{props.contactInfo.name}</h4></li>
     <li>{props.contactInfo.phone}</li>
     <li>{props.contactInfo.email}</li>
     </ul>);
