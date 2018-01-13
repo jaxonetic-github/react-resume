@@ -40,7 +40,7 @@ const secFirstItems = ['Gathered requirements and created design documentation i
 const techItems = ['Instructed a weekly two hour Java recitation class','Trained and managed a small team of new recitation Teaching Assistants','Prepared and evaluated weekly 45-minute quizzes and the three-hour final exam', 'Assisted professors in general administrative course duties and policy decisions']
 const reyeItems = ['Acted as a buffer/translator between scientists and developers, by helping translate scientific product documents into technical tasks for myself and other developers in JIRA.',
 'Helped managed and act as a point of contact to a team of developers in Vietnam and along the US east coast.',
-'Managed and maintened AWS cloud services.  This included creating Lambdas (in NodeJS and Java) which interact w	ith Dynamo DB, creating API Gateway endpoints, Route53 domain zones,  configuring load balancers, and syncing S3buckets with EC2 instances.',
+'Managed and maintened AWS cloud services.  This included creating Lambdas (in NodeJS and Java) which interact with Dynamo DB, creating API Gateway endpoints, Route53 domain zones,  configuring load balancers, and syncing S3buckets with EC2 instances.',
 'Managed  pushes from the development environment to staging, and production.',
 'Acted as the first point of contact for fixing client and in-house technical issues.',
 'Installed and deployed new systems for clients.',

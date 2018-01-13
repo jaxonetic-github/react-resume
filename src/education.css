@@ -36,10 +36,13 @@ h3{text-transform: capitalize}
 
 ul{list-style-type: none;}
 #contact-section{text-align: center}
+/* technology */
 .spaced-tablecell{padding-right: 100px;}
 #spaced-table{margin-left: 2em;}
 body {margin: 10px; }
+
 /* work info */
+#subtask-list{list-style-type:circle;}
 dl{margin-top: 0px;}
 h4{
     margin-bottom: 0px;
