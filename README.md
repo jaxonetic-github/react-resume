@@ -19,9 +19,15 @@ my-app/
     logo.svg
 ```
 
-## To run 
 
+
+
+
+## Screenshots
+
+### Component Demo
 ```sh
 npm start
 ```
-
+produces:
+![alt screenshot](https://github.com/jaxonetic-github/react-resume/blob/master/demo-screenshot.png)
