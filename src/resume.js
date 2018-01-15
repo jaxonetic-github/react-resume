@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import logo from './logo-gt.png';
 import './education.css';
 
-
 /**
  *
  * @description <Education gra... inst... degr.. city='' state=''/>
