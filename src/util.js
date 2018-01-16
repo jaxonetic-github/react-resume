@@ -1,7 +1,11 @@
-export function workHistoryTestData (){
+/**
+ * Builds education data
+ * @return [] an array of  WorkHistory objects consisting of general job info and specific tasks
+ */
+ export function workHistoryTestData (){
 
 /****** Work History Data Setup  *******/
-// Supre fills
+// Setup arrarys of subtasks for each job position
 const versiteItems = ['Maintained and updated sites built on top of the .NET framework.', 'Implemented new PHP sites based upon CakePHP, Jquery, and SASS.', 'Designed and Implemented a 3D virtual system using Unity3D, the Oculus Rift, and Kinect technologies.'];
 const presynctItems = ['Implemented  web applications designed  to help companies be paperless by digitalizing internal forms and  processes.', 'Designed and implemented an iPhone/iPad application that collected information(configurable by xml) and sent the information to a server and, ultimately, to a database.'];
 const rubberItems = ['Designed and implemented a Compliance application using EJB3 to track the efficiency and reliability of members within a Supply-Chain network.',
@@ -75,6 +79,11 @@ const reyeHistory = {companyName: 'Righteye, LLC', position: 'Software Engineer'
 return   [reyeHistory, versiteHistory, presynctHistory, rubberHistory, compuHistory, ingeoHistory, metaHistory, secFirstHistory,techHistory]; 
 }
 
+
+/**
+ * Builds technology data
+ * @return [] an array of technology objects
+ */
 export function technologyTestData (){
 const techOSs = {category:'Operating Systems', technologies:'Windows, Linux, Mac OSX'};
 const techLangs = {category:'Languages', technologies:'Java(J2EE), Objective C, PHP, Javascript'};
@@ -85,12 +94,19 @@ const techDbs = {category:'Databases', technologies:'Oracle, MySql, Sql Server, 
  return  [techOSs, techLangs, techFrameworks, techServers, techDbs];
 } 
 
+
+/**
+ * Builds an object for contact information
+ * @return {} contactInfo
+ */
 export function  contactTestData () {
 	return {name:'Alonzo Jackson', phone:'(301)304-7304', email:'jaxonetic@gmail.com'}
 }
 
+
 /**
- * Exporting some helpful functions and variables
+ * Builds education data
+ * @return [] an array of education objects
  */
 export function educationTestData() { 
 	/********  Start of Education setup  ********/
