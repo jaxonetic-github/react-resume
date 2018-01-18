@@ -1,4 +1,7 @@
-My [React]ive resume bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).  
+My [React]ive resume
+
+View Codepen [Demo here](https://codepen.io/jaxonetic/pen/KZrdYK)
+
 
 ## Folder Structure
 
@@ -19,13 +22,7 @@ my-app/
     logo.svg
 ```
 
-
-
-
-
 ## Screenshots
-
-### Component Demo
 ```sh
 npm start
 ```
