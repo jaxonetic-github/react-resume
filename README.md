@@ -1,10 +1,9 @@
-My [React]ive resume
+My **React**ive resume. 
 
 View Codepen [Demo here](https://codepen.io/jaxonetic/pen/KZrdYK)
 
 
 ## Folder Structure
-
 ```
 my-app/
   README.md
