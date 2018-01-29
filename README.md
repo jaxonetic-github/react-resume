@@ -1,6 +1,6 @@
-My **React**ive resume. 
+# My **React**ive resume. 
 
-View Codepen [Demo here](https://codepen.io/jaxonetic/pen/KZrdYK)
+View Codepen [Demo here](https://codepen.io/jaxonetic/pen/KZrdYK).  Please note that my most up-to-date resume can be found [HERE](https://drive.google.com/open?id=1DmMsnAhEoaQ163A4rn3wVIbbN3K-mG2PLp4jrUz49wg) on my Google Drive.
 
 
 ## Folder Structure
