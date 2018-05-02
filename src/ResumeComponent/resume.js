@@ -1,6 +1,34 @@
 import React, { Component } from 'react';
 import './education.css';
 
+
+/**
+ *  ContactInfo: Displays Contact info (Name, phone, email, address(?) 
+ * Displays resources for artists in a particulary city
+ * @name  ContactInfo
+ * @author Alonzo Jackson
+ * @description  Displays contactinfo
+ * @module ContactInfo
+ * @example  <ContactInfo contactInfo={...} />
+ * @param contactInfo  an object of contact information 
+ * @return A ContactInfo Web Component
+ */
+function ContactInfo(props) {
+
+  const listItems = props.contactInfo.map((item) =>
+    <li  key={item.t} className="section education">
+   {item.t}
+  </li>
+  );
+
+  return (
+    <ul id="contact-section">
+    <li><h4>{props.contactInfo.name}</h4></li>
+    {listItems}
+    </ul>);
+}
+
+
 /**
  * Displays Education history
  * @name  Education
@@ -12,11 +40,11 @@ import './education.css';
  * @return An Education Web Component
  */
 function Education(props) {
-  const listItems = props.history.map((item) =>
-    <div  key={item.institute} className="section education">
+  const listItems = props.history.institutions.map((item) =>
+    <div  key={item.t} className="section education">
     <dl>
         <dt>{item.graduationDate}</dt>
-        <dd><ul><li>{item.institute} - {item.city}, {item.state}</li>
+        <dd><ul><li>{item.t} - {item.city}, {item.state}</li>
             <li>{item.degree}</li></ul>
        </dd>
     </dl>
@@ -31,6 +59,29 @@ function Education(props) {
 }
 
 /**
+ * Displays a summary of technologies in tabular form
+ * @name  Technology
+ * @author Alonzo Jackson
+ * @description Ddisplays the Technology section of the Resume
+ * @module Technology
+ * @example <Technology technologies={...} />
+ * @return A Technology Web Component
+ * @param technologies  an array of technologies 
+ */
+function Technology(props) {
+
+  const listItems = props.technologies.map((item,key) =>
+       <tr key={item.category}><td className="spaced-tablecell">{item.category}</td><td>{item.technologies}</td></tr>
+  );
+  return (
+    <section>
+    <h3>Technology</h3>
+    <table id="spaced-table"><tbody>{listItems}</tbody></table>
+    </section>
+    );
+}
+
+/**
  * Displays subtasks required by the job position as a list.
  * @name  WorkSubtasks
  * @author Alonzo Jackson
@@ -42,6 +93,7 @@ function Education(props) {
  */
 function WorkSubtasks(props) {
   const items = props.items;
+
   const listItems = items.map((item) =>
     <li key={item.toString()}>
       {item}
@@ -64,71 +116,27 @@ function WorkSubtasks(props) {
  * @return A WorkHistory Web Component
  */
 function WorkHistory(props) {
-  const listItems = props.history.map((item,key) =>
-   <div key={key} className="work-info">
-      <h4>{item.companyName} {item.position} -  {item.city}, {item.state}  {item.country}</h4>
+
+  const listItems = props.history.histories.map((item,key) =>
+   <li key={key} className="work-info">
+      <h4><div className="horiz">{item.institute} </div>: <div className="horiz2"> {item.title} </div> <div className="horiz"> {item.city}, {item.state}  {item.country}</div></h4>
       <dl>
         <dt>
-          {item.fromDate} to {item.toDate}
+          {item.startDate} to {item.endDate}
         </dt>
         <dd>
-          <WorkSubtasks items={item.items} />
+          <WorkSubtasks items={item.subItems} />
+  
         </dd>
       </dl>
-    </div>
+    </li>
   );
   return (
     <section>
-    <h3>Work History</h3>
+    <h3>{props.history.title.t}</h3>
     <ul>{listItems}</ul>
     </section>
   );
-}
-
-/**
- * Displays a summary of technologies in tabular form
- * @name  Technology
- * @author Alonzo Jackson
- * @description Ddisplays the Technology section of the Resume
- * @module Technology
- * @example <Technology technologies={...} />
- * @return A Technology Web Component
- * @param technologies  an array of technologies 
- */
-function Technology(props) {
-  console.log(props.technologies);
-
-  const listItems = props.technologies.map((item,key) =>
-       <tr key={item.category}><td className="spaced-tablecell">{item.category}</td><td>{item.technologies}</td></tr>
-  );
-  return (
-    <section>
-    <h3>Technology</h3>
-    <table id="spaced-table"><tbody>{listItems}</tbody></table>
-    </section>
-    );
-}
-
-
-/**
- *  ContactInfo: Displays Contact info (Name, phone, email, address(?) 
- * Displays resources for artists in a particulary city
- * @name  ContactInfo
- * @author Alonzo Jackson
- * @description  Displays contactinfo
- * @module ContactInfo
- * @example  <ContactInfo contactInfo={...} />
- * @param contactInfo  an object of contact information 
- * @return A ContactInfo Web Component
- */
-function ContactInfo(props) {
-
-  return (
-    <ul id="contact-section">
-    <li><h4>{props.contactInfo.name}</h4></li>
-    <li>{props.contactInfo.phone}</li>
-    <li>{props.contactInfo.email}</li>
-    </ul>);
 }
 
 
@@ -151,12 +159,17 @@ function ContactInfo(props) {
  */
 class Resume extends Component {
   render() {
+
+    console.log(this.props);
+
     return (
     <div>    
       <ContactInfo contactInfo={this.props.contactInfo} />
       <Technology technologies={this.props.technology} />
+
       <Education history={this.props.educationHistory} />
       <WorkHistory history={this.props.workHistory} />
+
     </div>
     );
   }
