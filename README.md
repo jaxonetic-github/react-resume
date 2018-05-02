@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 My [React]ive resume bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).  So far this is pretty bare.  I may add a little Symantic-UI-React soon to spruce it up a bit.
 =======
 # My **React**ive resume. 
 
 View Codepen [Demo here](https://codepen.io/jaxonetic/pen/KZrdYK).  Please note that my most up-to-date resume can be found [HERE](https://drive.google.com/open?id=1DmMsnAhEoaQ163A4rn3wVIbbN3K-mG2PLp4jrUz49wg) on my Google Drive.
->>>>>>> 5615de123661f0c33a6fe17f89a2f4cef0b6ccb4
 
 
 ## Folder Structure
@@ -35,4 +33,5 @@ npm start
 ```
 produces:
 ![alt screenshot](https://github.com/jaxonetic-github/react-resume/blob/master/demo-screenshot.png)
+
 ####Note the Component layouts in the React devtool. 
