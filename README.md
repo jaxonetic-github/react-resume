@@ -1,4 +1,4 @@
-My [React]ive resume bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).  So far this is pretty bare.  I may add a little Symantic-UI-React soon to spruce it up a bit.
+
 =======
 # My **React**ive resume. 
 
